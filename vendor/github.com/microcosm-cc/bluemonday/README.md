@@ -247,7 +247,7 @@ p.AllowAttrs("src").OnElements("img")
 An additional complexity regarding links is the data URI as defined in [RFC2397](http://tools.ietf.org/html/rfc2397). The data URI allows for images to be served inline using this format:
 
 ```html
-<img src="data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=">
+<img src="data:,">
 ```
 
 We have provided a helper to verify the mimetype followed by base64 content of data URIs links:
