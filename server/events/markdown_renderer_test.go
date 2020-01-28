@@ -384,7 +384,8 @@ $$$
 $$$
 error
 $$$
-
+* :repeat: To **plan** this project again, comment:
+    * $hi$
 `,
 		},
 		{
@@ -451,6 +452,8 @@ $$$
 ---
 ### 2. dir: $path2$ workspace: $workspace$
 **Plan Failed**: failure
+* :repeat: To **plan** this project again, comment:
+    * $hi$
 
 ---
 ### 3. project: $projectname$ dir: $path3$ workspace: $workspace$
@@ -458,6 +461,8 @@ $$$
 $$$
 error
 $$$
+* :repeat: To **plan** this project again, comment:
+    * $hi$
 
 ---
 * :fast_forward: To **apply** all unapplied plans from this pull request, comment:
@@ -519,16 +524,19 @@ $$$
 					Workspace:    "workspace",
 					RepoRelDir:   "path",
 					ApplySuccess: "success",
+					RePlanCmd:    "Hi",
 				},
 				{
 					Workspace:  "workspace",
 					RepoRelDir: "path2",
 					Failure:    "failure",
+					RePlanCmd:  "Hi",
 				},
 				{
 					Workspace:  "workspace",
 					RepoRelDir: "path3",
 					Error:      errors.New("error"),
+					RePlanCmd:  "Hi",
 				},
 			},
 			models.Github,
@@ -635,6 +643,7 @@ $$$
 					Workspace:   "workspace",
 					RepoRelDir:  "path",
 					ProjectName: "projectname",
+					RePlanCmd:   "Hi",
 				},
 			},
 			models.Github,
@@ -826,6 +835,8 @@ $$$
 ` + c.Output + `
 $$$
 </details>
+* :repeat: To **plan** this project again, comment:
+    * $hi$
 
 `
 				} else {
@@ -835,6 +846,8 @@ $$$
 $$$
 ` + c.Output + `
 $$$
+* :repeat: To **plan** this project again, comment:
+    * $hi$
 
 `
 				}

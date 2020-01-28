@@ -379,6 +379,7 @@ type ProjectResult struct {
 	PlanSuccess  *PlanSuccess
 	ApplySuccess string
 	ProjectName  string
+	RePlanCmd    string
 }
 
 // CommitStatus returns the vcs commit status of this project result.

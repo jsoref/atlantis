@@ -115,19 +115,23 @@ func (m *MarkdownRenderer) renderProjectResults(results []models.ProjectResult, 
 				tmpl = wrappedErrTmpl
 			}
 			resultData.Rendered = m.renderTemplate(tmpl, struct {
-				Command string
-				Error   string
+				Command   string
+				Error     string
+				RePlanCmd string
 			}{
-				Command: common.Command,
-				Error:   result.Error.Error(),
+				Command:   common.Command,
+				Error:     result.Error.Error(),
+				RePlanCmd: "hi",
 			})
 		} else if result.Failure != "" {
 			resultData.Rendered = m.renderTemplate(failureTmpl, struct {
-				Command string
-				Failure string
+				Command   string
+				Failure   string
+				RePlanCmd string
 			}{
-				Command: common.Command,
-				Failure: result.Failure,
+				Command:   common.Command,
+				Failure:   result.Failure,
+				RePlanCmd: "hi",
 			})
 		} else if result.PlanSuccess != nil {
 			if m.shouldUseWrappedTmpl(vcsHost, result.PlanSuccess.TerraformOutput) {
@@ -260,16 +264,22 @@ var applyWrappedSuccessTmpl = template.Must(template.New("").Parse(
 var unwrappedErrTmplText = "**{{.Command}} Error**\n" +
 	"```\n" +
 	"{{.Error}}\n" +
-	"```"
+	"```\n" +
+	"* :repeat: To **plan** this project again, comment:\n" +
+	"    * `{{.RePlanCmd}}`"
 var wrappedErrTmplText = "**{{.Command}} Error**\n" +
 	"<details><summary>Show Output</summary>\n\n" +
 	"```\n" +
 	"{{.Error}}\n" +
-	"```\n</details>"
+	"```\n</details>\n" +
+	"* :repeat: To **plan** this project again, comment:\n" +
+	"    * `{{.RePlanCmd}}`"
 var unwrappedErrTmpl = template.Must(template.New("").Parse(unwrappedErrTmplText))
 var unwrappedErrWithLogTmpl = template.Must(template.New("").Parse(unwrappedErrTmplText + logTmpl))
 var wrappedErrTmpl = template.Must(template.New("").Parse(wrappedErrTmplText))
-var failureTmplText = "**{{.Command}} Failed**: {{.Failure}}"
+var failureTmplText = "**{{.Command}} Failed**: {{.Failure}}\n" +
+	"* :repeat: To **plan** this project again, comment:\n" +
+	"    * `{{.RePlanCmd}}`"
 var failureTmpl = template.Must(template.New("").Parse(failureTmplText))
 var failureWithLogTmpl = template.Must(template.New("").Parse(failureTmplText + logTmpl))
 var logTmpl = "{{if .Verbose}}\n<details><summary>Log</summary>\n  <p>\n\n```\n{{.Log}}```\n</p></details>{{end}}\n"
