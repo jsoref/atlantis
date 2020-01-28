@@ -11,10 +11,12 @@ require (
 	github.com/aws/aws-sdk-go v1.17.14 // indirect
 	github.com/boltdb/bolt v1.3.1
 	github.com/briandowns/spinner v0.0.0-20170614154858-48dbb65d7bd5
+	github.com/cosiner/argv v0.0.1 // indirect
 	github.com/davecgh/go-spew v1.1.1
 	github.com/docker/docker v0.0.0-20180620051407-e2593239d949
 	github.com/elazarl/go-bindata-assetfs v1.0.0
 	github.com/flynn-archive/go-shlex v0.0.0-20150515145356-3f9db97f8568
+	github.com/go-delve/delve v1.3.2 // indirect
 	github.com/go-ozzo/ozzo-validation v0.0.0-20170913164239-85dcd8368eba
 	github.com/go-playground/locales v0.12.1 // indirect
 	github.com/go-playground/universal-translator v0.16.0 // indirect
@@ -26,44 +28,45 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway v1.6.2 // indirect
 	github.com/hashicorp/go-getter v1.4.0
 	github.com/hashicorp/go-version v1.2.0
-	github.com/hashicorp/hcl v0.0.0-20170914154624-68e816d1c783 // indirect
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20190821133035-82a99dc22ef4
 	github.com/huandu/xstrings v1.0.0 // indirect
 	github.com/imdario/mergo v0.3.5 // indirect
-	github.com/inconshreveable/mousetrap v1.0.0 // indirect
-	github.com/magiconair/properties v1.7.3 // indirect
+	github.com/konsorten/go-windows-terminal-sequences v1.0.2 // indirect
+	github.com/mattn/go-colorable v0.1.4 // indirect
+	github.com/mattn/go-isatty v0.0.12 // indirect
+	github.com/mattn/go-runewidth v0.0.8 // indirect
 	github.com/mcdafydd/go-azuredevops v0.10.2
 	github.com/microcosm-cc/bluemonday v1.0.1
 	github.com/mitchellh/colorstring v0.0.0-20150917214807-8631ce90f286
-	github.com/mitchellh/go-homedir v1.0.0
+	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/gox v1.0.1 // indirect
-	github.com/mitchellh/mapstructure v0.0.0-20170523030023-d0303fe80992 // indirect
 	github.com/mohae/deepcopy v0.0.0-20170603005431-491d3605edfb
 	github.com/nlopes/slack v0.1.0
 	github.com/onsi/ginkgo v1.9.0 // indirect
 	github.com/openzipkin/zipkin-go v0.1.3 // indirect
 	github.com/pelletier/go-buffruneio v0.2.0 // indirect
-	github.com/pelletier/go-toml v1.0.0 // indirect
 	github.com/petergtz/pegomock v2.5.0+incompatible
+	github.com/peterh/liner v1.1.0 // indirect
 	github.com/pkg/errors v0.8.0
 	github.com/prometheus/client_golang v0.9.3-0.20190127221311-3c4408c8b829 // indirect
-	github.com/spf13/afero v0.0.0-20170901052352-ee1bd8ee15a1 // indirect
-	github.com/spf13/cast v1.1.0 // indirect
-	github.com/spf13/cobra v0.0.0-20170905172051-b78744579491
-	github.com/spf13/jwalterweatherman v0.0.0-20170901151539-12bd96e66386 // indirect
-	github.com/spf13/pflag v1.0.3
-	github.com/spf13/viper v1.0.0
+	github.com/sirupsen/logrus v1.4.2 // indirect
+	github.com/spf13/cobra v0.0.5
+	github.com/spf13/pflag v1.0.5
+	github.com/spf13/viper v1.3.2
 	github.com/ulikunitz/xz v0.5.6 // indirect
 	github.com/urfave/cli v1.20.0
 	github.com/urfave/negroni v0.2.0
 	github.com/xanzy/go-gitlab v0.22.2-0.20191127083556-16a492660b8c
+	go.starlark.net v0.0.0-20200126005305-451bf671df23 // indirect
+	golang.org/x/arch v0.0.0-20191126211547-368ea8f32fff // indirect
 	golang.org/x/build v0.0.0-20190111050920-041ab4dc3f9d // indirect
-	golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5
+	golang.org/x/crypto v0.0.0-20200128174031-69ecbb4d6d5d
 	golang.org/x/net v0.0.0-20191126235420-ef20fe5d7933 // indirect
 	golang.org/x/oauth2 v0.0.0-20191122200657-5d9234df094c // indirect
+	golang.org/x/sys v0.0.0-20200124204421-9fbb57f87de9 // indirect
 	google.golang.org/appengine v1.6.5 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v9 v9.20.2
-	gopkg.in/yaml.v2 v2.2.2
+	gopkg.in/yaml.v2 v2.2.8
 	gotest.tools v2.2.0+incompatible // indirect
 )

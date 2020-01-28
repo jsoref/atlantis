@@ -435,6 +435,7 @@ type PlanSuccess struct {
 	// branch we're merging into has been updated since we cloned and merged
 	// it.
 	HasDiverged bool
+	PlanSummary string
 }
 
 // PullStatus is the current status of a pull request that is in progress.

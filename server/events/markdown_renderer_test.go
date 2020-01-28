@@ -138,6 +138,7 @@ func TestRenderProjectResults(t *testing.T) {
 						LockURL:         "lock-url",
 						RePlanCmd:       "atlantis plan -d path -w workspace",
 						ApplyCmd:        "atlantis apply -d path -w workspace",
+						PlanSummary:     "Plan: Hello world",
 					},
 					Workspace:  "workspace",
 					RepoRelDir: "path",
@@ -149,7 +150,7 @@ func TestRenderProjectResults(t *testing.T) {
 $$$diff
 terraform-output
 $$$
-
+Plan: Hello world
 * :arrow_forward: To **apply** this plan, comment:
     * $atlantis apply -d path -w workspace$
 * :put_litter_in_its_place: To **delete** this plan click [here](lock-url)

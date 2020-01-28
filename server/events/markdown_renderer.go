@@ -238,6 +238,7 @@ var planSuccessWrappedTmpl = template.Must(template.New("").Parse(
 		"```\n\n" +
 		planNextSteps + "\n" +
 		"</details>" +
+		"{{ if .PlanSummary}}\nSummary: {{.PlanSummary}}\n{{end}}" +
 		"{{ if .HasDiverged }}\n\n:warning: The branch we're merging into is ahead, it is recommended to pull new commits first.{{end}}"))
 
 // planNextSteps are instructions appended after successful plans as to what
